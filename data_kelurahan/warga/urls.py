@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import PengaduanCreateView, PengaduanListView,PengaduanUpdateView,PengaduanDeleteView, WargaDeleteView, WargaListView, WargaDetailView, WargaCreateView, WargaUpdateView
 
+
 urlpatterns = [
     path('', WargaListView.as_view(),name='warga-list'),
     path('tambah/', WargaCreateView.as_view(), name='warga-tambah'),
@@ -12,4 +13,5 @@ urlpatterns = [
     path('pengaduan/tambah/', PengaduanCreateView.as_view(), name='pengaduan-tambah'),
     path('pengaduan/<int:pk>/edit/', PengaduanUpdateView.as_view(), name='pengaduan-edit'),
     path('pengaduan/<int:pk>/hapus/', PengaduanDeleteView.as_view(), name='pengaduan-hapus'),
+
 ]
